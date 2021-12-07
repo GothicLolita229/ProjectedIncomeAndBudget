@@ -14,11 +14,9 @@ public class LinaresFinalExam {
    
     public static void main(String[] args) 
     {
-        Scanner k = new Scanner(System.in);
-        double rate = 0, hours = 0;
         displayInfo();
-        rate = getRate(rate);
-        hours = getHours(hours);
+        double rate = getRate();
+        double hours = getHours();
         double grossPay = calculateGrossPay(rate, hours);
         displayRHGrossPay(rate, hours, grossPay);
         
@@ -30,14 +28,14 @@ public class LinaresFinalExam {
         System.out.println("This program calculates the gross pay "
                 + "for an individual");
     }
-    public static double getRate(double rate)
+    public static double getRate()
     {
         Scanner k = new Scanner(System.in);
         System.out.print("Enter your pay rate: $");
         rate = k.nextDouble();
         return rate;
     }
-    public static double getHours(double hours)
+    public static double getHours()
     {
         Scanner k = new Scanner(System.in);
         System.out.print("Enter your hours worked: ");
